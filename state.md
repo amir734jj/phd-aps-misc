@@ -16,7 +16,7 @@
 | `local-fiber-cycle.aps`        | Fail               | Pass          | Pass                | Pass          | Pass                |
 | `broad-fiber-cycle.aps`        | Fail               | Pass          | Fail                | Pass          | Pass                |
 | `below-fiber-cycle.aps`        | Fail               | Pass          | Pass                | Pass          | Pass                |
-| `below-single-fiber-cycle.aps` | Fail               | Pass          | Fail                | Pass          | Fail                |
+| `below-single-fiber-cycle.aps` | Fail               | Pass          | Pass                | Pass          | Pass                |
 | `cycle-series.aps`             | Fail               | Fail          | -                   | Pass          | Fail                |
 | `multi-series.aps`             | Fail               | Fail          | -                   | Pass          | Fail                |
 | `cycle.aps`                    | Fail               | Fail          | -                   | Fail          | -                   |
@@ -24,7 +24,7 @@
 | `cool-noinherit-semant.aps`    | Pass               | Pass          | Pass                | Pass          | Pass                |
 | `cool-circular-semant.aps`     | Fail               | Pass          | Fail                | Pass          | Pass                |
 | `cool-semant.aps`              | Fail               | Pass          | Fail                | Pass          | Fail                |
-| `cool-dynamic-semant.aps`      | Pass               | Pass          | Fail                | Pass          | Fail                |
+| `cool-dynamic-semant.aps`      | Pass               | Pass          | Fail                | Fail          | -	                  |
 
 ---
 
@@ -156,7 +156,7 @@ Evaluation$UndefinedAttributeException: undefined attribute: context(0).ptr1
 Evaluation$UndefinedAttributeException: undefined attribute: context(0).ptr
 ```
 
-- Both Old and new static code generations throws stackoverflow error:
+- Both Old and new static code generations throws stackoverflow error at f_index_scope function but it could be fixed by replacing it with tail recursive style code:
 ```
 Exception in thread "main" java.lang.StackOverflowError
 	at M__basic_8$$Lambda$133/0x0000000840165040.<init>(Unknown Source)
